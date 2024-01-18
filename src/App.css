@@ -57,3 +57,33 @@
   text-decoration: none;
   color: pink;
 }
+
+.projectBox {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.projectBox li {
+  text-align: center;
+}
+
+.projectBox a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.projectBox a:hover {
+  color: #61dafb;
+}
+
+.projectLink:hover img {
+  border: 2px solid #61dafb;
+}
+
+.projectImage {
+  border: 2px solid lightgray;
+  border-radius: 20px;
+  width: 250px;
+}
