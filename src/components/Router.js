@@ -3,6 +3,7 @@ import Contact from '../pages/Contact';
 import Home from '../pages/Home';
 import Projects from '../pages/Projects';
 import ProjectDetails from '../pages/ProjectDetails';
+import ChatUI from './ChatUI';
 import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
 
 export default function Router(){
@@ -11,6 +12,7 @@ export default function Router(){
             <>
                 <Header></Header>
                 <Outlet></Outlet>
+                <ChatUI></ChatUI>
             </>
         )
     }
