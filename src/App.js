@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import Router from './components/Router';
 import Context from './components/Context';
+import { GoogleLogin } from '@react-oauth/google';
+import { useState } from 'react';
 
 
 function App() {
@@ -15,9 +17,9 @@ function App() {
 
   return(
     <>
-      <Context.Provider value={userInfo}>
-        <Router />
-      </Context.Provider>
+        <Context.Provider value={userInfo}>
+          <Router />
+        </Context.Provider>      
     </>
   )  
 }
