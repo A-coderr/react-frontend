@@ -1,11 +1,13 @@
 import { useContext } from "react"
 import Context from "./Context"
-export default function Header(){
-    const userData = useContext(Context)
+import { Link } from "react-router-dom"
+
+const Header = ({user}) => {
     return(
       <nav className='nav-bar'>
-      <p>Logo</p>
-      <ul>
+      <p><Link to="/">Logo</Link></p>
+      {user ? (
+        <ul>
         <li>
           <a href="/">Home</a>
         </li>
@@ -15,8 +17,13 @@ export default function Header(){
         <li>
           <a href="/projects">Projects</a>
         </li>
-        <li>Hello, {userData.name}</li>
+        <li>Hello, {user.name}</li>
       </ul>
+      ) : (
+        <Link to= "login">Login</Link>
+      )}
+      
     </nav> 
     )
   }
+  export default Header;
